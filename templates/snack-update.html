@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <Title>Editing {{ snack.name }} | Aoife's Snacks</Title>
+{% endblock title %}
+
+{% block header %}
+    <h1>Edit {{ snack.name }}</h1>
+{% endblock header %}
+
+{% block body %}
+
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="SAVE">
+  </form>
+
+{% endblock body %}

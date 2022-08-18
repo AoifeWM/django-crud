@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        {% block title %}
+            <title>Aoife's Snacks</title>
+        {% endblock title %}
+    </head>
+    <header>
+        <nav>
+            <a href="{% url 'snack_list' %}">Snack List</a>
+            <a href="{% url 'snack_create' %}">Create a Snack</a>
+        </nav>
+        {% block header %}
+            <h1>Aoife's Snacks</h1>
+        {% endblock header %}
+    </header>
+    <body>
+        {% block body %}
+            <h2>This is the default template. If this shows up, something went wrong!</h2>
+        {% endblock body %}
+
+    </body>
+    <footer>
+        <p>
+            Created by <a href="https://github.com/AoifeWM">Aoife WM</a> in Django in August 2022.
+        </p>
+    </footer>
+</html>
