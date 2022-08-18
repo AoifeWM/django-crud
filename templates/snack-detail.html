@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <Title>{{ snack.name }} | Aoife's Snacks</Title>
+{% endblock title %}
+
+{% block header %}
+    <h1>{{ snack.name }}</h1>
+    <h3>added by {{ snack.purchaser }}</h3>
+{% endblock header %}
+
+{% block body %}
+    <p>{{ snack.description }}</p>
+    <p id="links">
+        actions:
+        <a id="update-link" href="{% url 'snack_update' snack.pk %}">Edit</a>
+        <a id="delete-link" href="{% url 'snack_delete' snack.pk %}">Delete</a>
+    </p>
+{% endblock body %}
