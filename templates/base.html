@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,25 +6,30 @@
         {% block title %}
             <title>Aoife's Snacks</title>
         {% endblock title %}
+        <link rel="stylesheet" href="{% static 'reset.css' %}">
+        <link rel="stylesheet" href="{% static 'base.css' %}">
     </head>
-    <header>
-        <nav>
-            <a href="{% url 'snack_list' %}">Snack List</a>
-            <a href="{% url 'snack_create' %}">Create a Snack</a>
-        </nav>
-        {% block header %}
-            <h1>Aoife's Snacks</h1>
-        {% endblock header %}
-    </header>
-    <body>
-        {% block body %}
-            <h2>This is the default template. If this shows up, something went wrong!</h2>
-        {% endblock body %}
-
-    </body>
-    <footer>
-        <p>
-            Created by <a href="https://github.com/AoifeWM">Aoife WM</a> in Django in August 2022.
-        </p>
-    </footer>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <a href="{% url 'snack_list' %}">Snack List</a>
+                <a href="{% url 'snack_create' %}">Create a Snack</a>
+            </nav>
+            {% block header %}
+                <h1>Aoife's Snacks</h1>
+            {% endblock header %}
+        </header>
+        <body>
+            <div id="divbody">
+                {% block body %}
+                <h2>This is the default template. If this shows up, something went wrong!</h2>
+                {% endblock body %}
+            </div>
+        </body>
+        <footer>
+            <p>
+                Created by <a href="https://github.com/AoifeWM">Aoife WM</a> in Django in August 2022.
+            </p>
+        </footer>
+    </div>
 </html>

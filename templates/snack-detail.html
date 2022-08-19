@@ -10,9 +10,8 @@
 {% endblock header %}
 
 {% block body %}
-    <p>{{ snack.description }}</p>
+    <p id="description-detail">{{ snack.description }}</p>
     <p id="links">
-        actions:
         <a id="update-link" href="{% url 'snack_update' snack.pk %}">Edit</a>
         <a id="delete-link" href="{% url 'snack_delete' snack.pk %}">Delete</a>
     </p>
